@@ -348,6 +348,7 @@ experiment('learning_rate', [0.0001, 0.001, 0.01, 0.1],
 | 6 | CNN params (if needed) | Architecture specific | 3 days |
 
 **Golden rule:** Theory tells you parameters exist. Experimenting tells you what they *do*. Do both.
+```text
 ┌─────────────────────────────────────────────────────────┐
 │            REAL-WORLD DEEP LEARNING                     │
 ├─────────────────────────────────────────────────────────┤
@@ -369,3 +370,4 @@ experiment('learning_rate', [0.0001, 0.001, 0.01, 0.1],
 │  └─────────────┘    │   analysis  │    └─────────────┘ │
 │                     └─────────────┘                    │
 └─────────────────────────────────────────────────────────┘
+```

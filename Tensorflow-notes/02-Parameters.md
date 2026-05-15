@@ -348,3 +348,24 @@ experiment('learning_rate', [0.0001, 0.001, 0.01, 0.1],
 | 6 | CNN params (if needed) | Architecture specific | 3 days |
 
 **Golden rule:** Theory tells you parameters exist. Experimenting tells you what they *do*. Do both.
+┌─────────────────────────────────────────────────────────┐
+│            REAL-WORLD DEEP LEARNING                     │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐ │
+│  │ Parameters  │    │    Data     │    │ Deployment  │ │
+│  │ (25%)       │    │ Pipeline    │    │ (20%)       │ │
+│  │ • LR        │    │ (30%)       │    │ • Serving   │ │
+│  │ • batch     │    │ • tf.data   │    │ • API       │ │
+│  │ • units     │    │ • caching   │    │ • latency   │ │
+│  └─────────────┘    │ • prefetch  │    └─────────────┘ │
+│                     └─────────────┘                    │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐ │
+│  │ Evaluation  │    │ Debugging   │    │    Git      │ │
+│  │ (15%)       │    │ (15%)       │    │ (5%)        │ │
+│  │ • metrics   │    │ • gradient  │    │ • version   │ │
+│  │ • confusion │    │   checking  │    │ • CI/CD     │ │
+│  │ • ROC       │    │ • failure   │    │             │ │
+│  └─────────────┘    │   analysis  │    └─────────────┘ │
+│                     └─────────────┘                    │
+└─────────────────────────────────────────────────────────┘

@@ -222,6 +222,7 @@ Output(y)
 # HOW THE NEURON WORKS
 
 Neural network computes:
+<img width="980" height="292" alt="image" src="https://github.com/user-attachments/assets/7ca7451c-6f0e-4221-8f2b-841f5b43c6b8" />
 
 genui{"math_block_widget_always_prefetch_v2":{"content":"y = wx + b"}}
 

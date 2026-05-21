@@ -288,3 +288,39 @@ and:
 TensorFlow/PyTorch → engine
 Hugging Face → model marketplace/ecosystem
 ```
+
+Exactly — Hugging Face is not a standalone framework. You **access Hugging Face models through one of the supported deep learning frameworks**:
+
+- **PyTorch** → the default backend for most Hugging Face models.  
+- **TensorFlow/Keras** → many models also have TensorFlow equivalents.  
+- **JAX/Flax** → used in some research-oriented models.  
+
+So when you install and use Hugging Face, you also need at least one of these frameworks in your environment. Hugging Face provides the **Transformers library** (the API layer), but the actual math and training/inference are executed by PyTorch, TensorFlow, or JAX.
+
+---
+
+### 🔹 Example Workflows
+
+**Using Hugging Face with PyTorch (default)**
+```python
+from transformers import AutoTokenizer, AutoModel
+
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+model = AutoModel.from_pretrained("bert-base-uncased")  # PyTorch backend
+```
+
+**Using Hugging Face with TensorFlow**
+```python
+from transformers import AutoTokenizer, TFAutoModel
+
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+model = TFAutoModel.from_pretrained("bert-base-uncased")  # TensorFlow backend
+```
+
+---
+
+### 🔹 Key Takeaway
+- Hugging Face = **model hub + API layer**.  
+- Framework (PyTorch, TensorFlow, JAX) = **engine that runs the model**.  
+- You don’t need *both* frameworks — just one is enough, depending on your project.  
+
